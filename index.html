@@ -13,16 +13,16 @@ layout: default
 <div id="post-pagination" class="pagination">
   {% if paginator.previous_page %}
     {% if paginator.previous_page == 1 %}
-    <a class="previous" href="/">Previous</a>
+    <a class="previous" href="">Previous</a>
     {% else %}
-    <a class="previous" href="/page{{paginator.previous_page}}">Previous</a>
+    <a class="previous" href="page{{paginator.previous_page}}">Previous</a>
     {% endif %}
   {% else %}
   <span class="previous disabled">Previous</span>
   {% endif %}
   <span class="page_number ">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
   {% if paginator.next_page %}
-  <a class="next" href="/page{{paginator.next_page}}">Next</a>
+  <a class="next" href="page{{paginator.next_page}}">Next</a>
   {% else %}
   <span class="next disabled">Next</span>
   {% endif %}
