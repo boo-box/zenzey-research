@@ -1,1 +1,3 @@
 paginate: 5
+baseUrl: /zenzey-research
+production_url : http://boo-box.github.com/zenzey-research/
