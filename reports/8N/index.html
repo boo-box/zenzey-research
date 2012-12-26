@@ -55,6 +55,7 @@
             width: $el.width(),
             height: $el.height(),
             collisionAlpha: 15,
+            tooltipTemplate: "<div>usuario: {{ text }}</div><div>interacciones: {{ count }}</div>",
             onReset: function() {
               $slider.rangeSlider("values", min, max);
               $search.val("");
@@ -70,6 +71,9 @@
           $slider.rangeSlider({ 
                 arrows: false,
                 step: 10, 
+                formatter: function(val) {
+                  return val " interacciones";
+                },
                 bounds: { 
                     min: min,
                     max: max,
@@ -107,21 +111,13 @@
             ch && graph.selectByText(val);
         });
 
-
-        var MAX_ZOOM = 2.5;
-        var MIN_ZOOM = .5;
-        var ZOOM_FACTOR = .3;
         $("#zoom-in").click(function(ev) {
           ev.preventDefault();ev.stopPropagation();
-          var current = graph._zoom.scale();
-          var z = Math.min(MAX_ZOOM, current + .3);
           graph.zoomIn();
         });
 
         $("#zoom-out").click(function(ev) {
           ev.preventDefault();ev.stopPropagation();
-          var current = graph._zoom.scale();
-          var z = Math.max(MIN_ZOOM, current - .3);
           graph.zoomOut();
         });
       }();
