@@ -3,9 +3,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>An&aacute;lisis del #8N</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-responsive.css" />
-    <link rel="stylesheet" href="assets/insights/insights-default.css" />
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://ignacioola.github.com/insights-graph/dist/insights-default.css" />
     <link rel="stylesheet" href="assets/jQRangeSlider/css/iThing.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
     
@@ -35,13 +34,14 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="assets/insights/insights.packaged.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script src="assets/jQRangeSlider/jQRangeSlider-min.js"></script>
 
+    <script src="http://ignacioola.github.com/insights-graph/dist/insights.packaged.js"></script>
+
     <script>
       !function() {
-        d3.json("8N.json", function(data) {
+        d3.json("data/graph.json", function(data) {
           var nodes = data[0],
               links = data[1],
               $el = $("#parent"),
@@ -54,6 +54,7 @@
           graph = new InsightsGraph($el.get(0), nodes, links, {
             width: $el.width(),
             height: $el.height(),
+            sizeAttr: "total",
             collisionAlpha: 15,
             tooltipTemplate: "<div>usuario: {{ text }}</div><div>interacciones: {{ count }}</div>",
             onReset: function() {
