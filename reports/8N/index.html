@@ -5,8 +5,8 @@
     <title>An&aacute;lisis del #8N</title>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <link rel="stylesheet" href="http://ignacioola.github.com/insights-graph/dist/insights-default.css" />
-    <link rel="stylesheet" href="assets/jQRangeSlider/css/iThing.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="lib/jQRangeSlider/css/iThing.css" />
+    <link rel="stylesheet" href="css/main.css" />
     
   </head>
   <body>
@@ -35,93 +35,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-    <script src="assets/jQRangeSlider/jQRangeSlider-min.js"></script>
+    <script src="lib/jQRangeSlider/jQRangeSlider-min.js"></script>
 
     <script src="http://ignacioola.github.com/insights-graph/dist/insights.packaged.js"></script>
+    <script src="js/app.js"></script>
 
     <script>
-      !function() {
-        d3.json("data/graph.json", function(data) {
-          var nodes = data[0],
-              links = data[1],
-              $el = $("#parent"),
-              $slider = $("#count-slider"),
-              $search = $("#name-search");
-          var min, max;
-
-          //var nodes = data[0].slice(0, 100),
-          //    links = data[1].slice(0, 200),
-          graph = new InsightsGraph($el.get(0), nodes, links, {
-            width: $el.width(),
-            height: $el.height(),
-            sizeAttr: "total",
-            collisionAlpha: 15,
-            tooltipTemplate: "<div>usuario: {{ text }}</div><div>interacciones: {{ count }}</div>",
-            onReset: function() {
-              $slider.rangeSlider("values", min, max);
-              $search.val("");
-            },
-            onRendered: function() {
-              $("#loading").hide();
-            }
-          });
-
-          min = 0; max = graph.max.count + 10;
-
-          var sliderValues = {};
-          $slider.rangeSlider({ 
-                arrows: false,
-                step: 10, 
-                formatter: function(val) {
-                  return val + " interacciones";
-                },
-                bounds: { 
-                    min: min,
-                    max: max,
-                }, 
-                defaultValues: { 
-                    min: min,
-                    max: max
-                } 
-            }).on("valuesChanged", function(e, data) {                                 
-                var vals = sliderValues;                                         
-
-                if (vals.max !== data.values.max || vals.min !== data.values.min) { 
-                    graph.selectBy(function(d) {
-                      return d.count > data.values.min && d.count < data.values.max;
-                    });
-                }                                                                      
-        
-                sliderValues = data.values;                                      
-            });
-        });
-
-        $("#name-search").keyup(function(ev) {
-           var val, ch,
-               $el = $(this);
-
-            if (ev.keyCode == 27) { // key: esc
-                graph.reset();
-                $el.val("");
-                return;
-            }
-
-            val = $el.val();
-            ch = String.fromCharCode(ev.keyCode || ev.charCode);
-
-            ch && graph.selectByText(val);
-        });
-
-        $("#zoom-in").click(function(ev) {
-          ev.preventDefault();ev.stopPropagation();
-          graph.zoomIn();
-        });
-
-        $("#zoom-out").click(function(ev) {
-          ev.preventDefault();ev.stopPropagation();
-          graph.zoomOut();
-        });
-      }();
+      d3.json("data/graph.json", app);
     </script>
   </body>
 </html>
