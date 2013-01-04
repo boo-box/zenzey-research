@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="http://ignacioola.github.com/insights-graph/dist/insights-default.css" />
     <link rel="stylesheet" href="lib/jQRangeSlider/css/iThing.css" />
 
-    <link rel="stylesheet" href="build/build.css" />
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="lib/DataTables/DT_bootstrap.css" />
     
   </head>
   <body>
@@ -20,6 +20,9 @@
           <form class="form-search">
             <input id="name-search" type="text" class="input-medium search-query" placeholder="buscar" />
           </form> 
+          <!--
+          <a href="#" class="btn show-filters" rel="popover">Filtros</a> 
+          -->
           <div id="parent" style="position:relative">
             <div class="btn-group btn-group-vertical" style="position:absolute;top:10px;right:10px;">
               <button id="zoom-in" type="button" class="btn"><i class="icon-zoom-in"></i></button>
@@ -32,21 +35,28 @@
       <div class="row">
         <div class="span12">
          <div id="count-slider"></div>
+         <div id="data-table"></div>
         </div>
       </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="lib/DataTables/jquery.dataTables.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
     <script src="lib/jQRangeSlider/jQRangeSlider-min.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
     <script src="http://ignacioola.github.com/insights-graph/dist/insights.packaged.js"></script>
 
-    <script src="build/build.js"></script>
     <script src="js/app.js"></script>
 
     <script>
       d3.json("data/clustering.json", app);
+      $(".show-filters").popover({ content: "<div class='pepe'></div>", html: true })
+                        .click(function(e) {
+                          e.preventDefault()
+                          $(".pepe").rangeSlider();
+                          console.log($(".pepe"));
+                        });
     </script>
   </body>
 </html>
