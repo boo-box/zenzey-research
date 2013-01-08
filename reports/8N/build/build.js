@@ -21273,6 +21273,7 @@ function app(data) {
             collisionAlpha: 15,
             tooltipTemplate: TOOLTIP,
             onReset: function() {
+                hideNotification();
                 $slider.rangeSlider("values", min, max);
                 $search.val("");
                 dataTable.fnFilter("")
@@ -21388,6 +21389,7 @@ function app(data) {
         var tableData = _(nodes).map(function(d) { return [ d.text, d.cluster, d.in, d.out, d.total ] });
 
         var dataTable = $('#data-table table').dataTable({
+                "aaSorting": [[ 4, "desc" ]],
                 "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
                 "sPaginationType": "bootstrap",
                 "oLanguage":{
@@ -21418,7 +21420,8 @@ function app(data) {
                 "aaData": tableData,
                 "aoColumns": tableHeaders,
                 "aoColumnDefs": [ 
-                    { "aTargets": [0], 
+                    { 
+                        "aTargets": [0], 
                         "sType": "html", 
                         "fnRender": function(o, val) { 
                             var user = o.aData[0];
@@ -21438,8 +21441,7 @@ function app(data) {
                         } 
                     }
                 ]
-            } );    
-
+            });    
     }
 
     prevNotification = null;
