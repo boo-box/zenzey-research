@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title> {% if page.title %} {{ page.title }} | {% endif %} Zenzey Research Blog </title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/static/css/jekyll.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/static/css/theme.css" />
+  <link rel="alternate" type="application/rss+xml" title="RSS for Official Twitter Bootstrap Bog" href="{{ site.baseurl }}/feed.xml">
+</head>
+<body>
+  <div class="container">
+    <header class="masthead">
+      <a class="zenzey-logo" href="{{ site.baseurl }}/" title="Home">
+        <img src="{{ site.baseurl }}/static/img/logo.png" alt="Zenzey">
+      </a>
+      <p><strong>Zenzey Research Blog</strong></p>
+    </header>
+    {{ content }}
+    <footer class="colophon">
+      <p>@Grupo42 2012 | All Rights Reserved. </p>
+    </footer>
+  </div>
+</body>
+</html>
