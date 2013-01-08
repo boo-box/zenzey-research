@@ -4,12 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>An&aacute;lisis del #8N</title>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <!--
     <link rel="stylesheet" href="http://ignacioola.github.com/insights-graph/dist/insights-default.css" />
-    <link rel="stylesheet" href="lib/jQRangeSlider/css/iThing.css" />
-
     <link rel="stylesheet" href="css/main.css" />
+    -->
+    <link rel="stylesheet" href="lib/jQRangeSlider/css/iThing.css" />
     <link rel="stylesheet" href="lib/DataTables/DT_bootstrap.css" />
-    
+    <link rel="stylesheet" href="build/build.css" />
   </head>
   <body>
     <div class="container">
@@ -44,15 +45,19 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="lib/DataTables/jquery.dataTables.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-    <script src="lib/jQRangeSlider/jQRangeSlider-min.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
-    <script src="js/DT_bootstrap.js"></script>
+    <script src="lib/jQRangeSlider/jQRangeSlider-min.js"></script>
+    <script src="lib/DataTables/jquery.dataTables.js"></script>
+    <script src="lib/DT_bootstrap.js"></script>
+    <!--
     <script src="http://ignacioola.github.com/insights-graph/dist/insights.packaged.js"></script>
-
     <script src="js/app.js"></script>
+    -->
+    <script src="build/build.js"></script>
     <script>
+      var app = require("8n");
+
       d3.json("data/graph.json", app);
     </script>
   </body>
