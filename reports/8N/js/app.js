@@ -200,7 +200,7 @@ function app(data) {
     }
 
     showTweets = function(screenName) {
-        $.getJSON("../data/accounts/" + screenName, function(data) {
+        $.getJSON("data/accounts/" + screenName, function(data) {
             var title = "Tweets enviados por @" + screenName;
             var tweets = _(data.sent).isArray() ? data.sent : [];
             var $list;
