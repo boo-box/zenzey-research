@@ -21450,7 +21450,9 @@ function app(data) {
     }
 
     showTweets = function(screenName) {
-        var $wrapper = $("<div>").html("Cargando..");
+        var $wrapper = $("<div>").css({
+                width: 350,
+            }).html("Cargando..");
         var title = "Tweets enviados por @" + screenName;
         hideNotification();
         prevNotification = notify(title, $wrapper).sticky();
@@ -21474,8 +21476,6 @@ function app(data) {
                 }).html($list); 
 
             $wrapper.html($el);
-
-            //prevNotification = notify(title, $el).sticky();
         });
     }
 
