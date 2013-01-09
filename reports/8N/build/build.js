@@ -21450,8 +21450,12 @@ function app(data) {
     }
 
     showTweets = function(screenName) {
+        var $wrapper = $("<div>").html("Cargando..");
+        var title = "Tweets enviados por @" + screenName;
+        hideNotification();
+        prevNotification = notify(title, $wrapper).sticky();
+
         $.getJSON("data/accounts/" + screenName, function(data) {
-            var title = "Tweets enviados por @" + screenName;
             var tweets = _(data.sent).isArray() ? data.sent : [];
             var $list;
 
@@ -21469,8 +21473,9 @@ function app(data) {
                     marginTop: 10
                 }).html($list); 
 
-            hideNotification();
-            prevNotification = notify(title, $el).sticky();
+            $wrapper.html($el);
+
+            //prevNotification = notify(title, $el).sticky();
         });
     }
 
