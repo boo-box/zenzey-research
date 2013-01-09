@@ -203,6 +203,7 @@ function app(data) {
         var $wrapper = $("<div>").css({
                 width: 350,
                 height: 300,
+                marginTop: 10,
                 overflow: "scroll"
             }).html("Cargando..");
         var title = "Tweets enviados por @" + screenName;
@@ -221,9 +222,7 @@ function app(data) {
                 $list = "Sin tweets";
             }
 
-            var $el = $("<ol>").addClass("media-list").css({
-                    marginTop: 10
-                }).html($list); 
+            var $el = $("<ol>").addClass("media-list").html($list); 
 
             $wrapper.html($el);
         });
