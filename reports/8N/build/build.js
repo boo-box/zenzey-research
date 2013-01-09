@@ -21452,6 +21452,8 @@ function app(data) {
     showTweets = function(screenName) {
         var $wrapper = $("<div>").css({
                 width: 350,
+                height: 300,
+                overflow: "scroll"
             }).html("Cargando..");
         var title = "Tweets enviados por @" + screenName;
         hideNotification();
@@ -21470,8 +21472,6 @@ function app(data) {
             }
 
             var $el = $("<ol>").addClass("media-list").css({
-                    height: 300,
-                    overflow: "scroll",
                     marginTop: 10
                 }).html($list); 
 
