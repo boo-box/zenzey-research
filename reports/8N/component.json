@@ -1,6 +1,6 @@
 {
-  "name": "8n",
-  "description": "visualizacion del 8n",
+  "name": "insights-app",
+  "description": "app for visualizing insights",
   "development": {},
   "dependencies": {
     "ignacioola/insights": "*",

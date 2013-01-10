@@ -21247,7 +21247,7 @@ Notification.prototype.remove = function(){
 require.register("component-notification/template.js", function(exports, require, module){
 module.exports = '<li class="notification hide">\n  <div class="content">\n    <span class="title">Title</span>\n    <a href="#" class="close">×</a>\n    <p>Message</p>\n  </div>\n</li>';
 });
-require.register("8n/js/app.js", function(exports, require, module){
+require.register("insights-app/js/app.js", function(exports, require, module){
 var InsightsGraph = require("insights"),
     _ = require("underscore"),
     notify = require('notification'),
@@ -21488,15 +21488,15 @@ module.exports = app;
 
 
 });
-require.register("8n/index.js", function(exports, require, module){
+require.register("insights-app/index.js", function(exports, require, module){
 var app = require("./js/app");
 
 module.exports = app;
 
 });
-require.alias("ignacioola-insights/src/tooltip.js", "8n/deps/insights/src/tooltip.js");
-require.alias("ignacioola-insights/src/graph.js", "8n/deps/insights/src/graph.js");
-require.alias("ignacioola-insights/index.js", "8n/deps/insights/index.js");
+require.alias("ignacioola-insights/src/tooltip.js", "insights-app/deps/insights/src/tooltip.js");
+require.alias("ignacioola-insights/src/graph.js", "insights-app/deps/insights/src/graph.js");
+require.alias("ignacioola-insights/index.js", "insights-app/deps/insights/index.js");
 require.alias("ignacioola-d3/d3.js", "ignacioola-insights/deps/d3/d3.js");
 require.alias("ignacioola-d3/d3.js", "ignacioola-insights/deps/d3/index.js");
 
@@ -21506,13 +21506,13 @@ require.alias("component-emitter/index.js", "ignacioola-insights/deps/emitter/in
 
 require.alias("component-bind/index.js", "ignacioola-insights/deps/bind/index.js");
 
-require.alias("ignacioola-twitter-text-js/twitter-text.js", "8n/deps/twitter-text/twitter-text.js");
-require.alias("ignacioola-twitter-text-js/index.js", "8n/deps/twitter-text/index.js");
+require.alias("ignacioola-twitter-text-js/twitter-text.js", "insights-app/deps/twitter-text/twitter-text.js");
+require.alias("ignacioola-twitter-text-js/index.js", "insights-app/deps/twitter-text/index.js");
 
-require.alias("component-underscore/index.js", "8n/deps/underscore/index.js");
+require.alias("component-underscore/index.js", "insights-app/deps/underscore/index.js");
 
-require.alias("component-notification/index.js", "8n/deps/notification/index.js");
-require.alias("component-notification/template.js", "8n/deps/notification/template.js");
+require.alias("component-notification/index.js", "insights-app/deps/notification/index.js");
+require.alias("component-notification/template.js", "insights-app/deps/notification/template.js");
 require.alias("component-emitter/index.js", "component-notification/deps/emitter/index.js");
 
 require.alias("component-jquery/index.js", "component-notification/deps/jquery/index.js");
