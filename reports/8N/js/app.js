@@ -21,21 +21,32 @@ function app(data) {
             height: $el.height(),
             sizeAttr: "total",
             collisionAlpha: 15,
-            tooltipTemplate: TOOLTIP,
-            onReset: function() {
-                hideNotification();
-                $slider.rangeSlider("values", min, max);
-                $search.val("");
-                dataTable.fnFilter("")
-                $clusterButtons.find(".active").removeClass("active");
-            },
-            onRendered: function() {
-                $("#loading").hide();
-            }
+            tooltipTemplate: TOOLTIP
         });
+
+    graph.on("rendered", function(n) {
+        $("#loading").hide();
+    });
+
+    graph.on("reset", function(n) {
+        selectedNode = null;
+        hideNotification();
+        $slider.rangeSlider("values", min, max);
+        $search.val("");
+        dataTable.fnFilter("")
+        $clusterButtons.find(".active").removeClass("active");
+    });
 
     graph.on("node:click", function(n) {
         showTweets(n.text);
+    });
+
+    graph.on("node:mouseover", function(n) {
+        if (!window.selectedNode) return;
+        var tweet = selectedNode.rcvd[n.text];
+        if (!tweet) return;
+        $("#insights-tooltip").append("<br />").append($("<div>").css({fontWeight:"bold"}).text("Mención a @" + graph.selectedNode.text + ":"));
+        $("#insights-tooltip").append($("<div>").css({maxWidth: 250}).text(tweet));
     });
 
     min = 0; max = graph.max.size + 10;
@@ -213,6 +224,8 @@ function app(data) {
         $.getJSON("data/accounts/" + screenName, function(data) {
             var tweets = _(data.sent).isArray() ? data.sent : [];
             var $list;
+
+            selectedNode = data;
 
             if (tweets.length) {
                 $list = $.map(tweets, function(t) {
