@@ -8176,7 +8176,7 @@ module.exports = Emitter;
 
 /**
  * Initialize a new `Emitter`.
- * 
+ *
  * @api public
  */
 
@@ -8249,7 +8249,9 @@ Emitter.prototype.once = function(event, fn){
  * @api public
  */
 
-Emitter.prototype.off = function(event, fn){
+Emitter.prototype.off =
+Emitter.prototype.removeListener =
+Emitter.prototype.removeAllListeners = function(event, fn){
   this._callbacks = this._callbacks || {};
   var callbacks = this._callbacks[event];
   if (!callbacks) return this;
@@ -8271,7 +8273,7 @@ Emitter.prototype.off = function(event, fn){
  *
  * @param {String} event
  * @param {Mixed} ...
- * @return {Emitter} 
+ * @return {Emitter}
  */
 
 Emitter.prototype.emit = function(event){
@@ -8314,7 +8316,6 @@ Emitter.prototype.hasListeners = function(event){
   return !! this.listeners(event).length;
 };
 
-
 });
 require.register("component-bind/index.js", function(exports, require, module){
 
@@ -8352,7 +8353,12 @@ function Tooltip(options) {
     this._data = {};
 
     this._createElement();
-    this.renderTemplate = minstache.compile(options.template);
+
+    try {
+        this.renderTemplate = minstache.compile(options.template);
+    } catch(err) {
+        throw new Error("Error parsing tooltip template.", err);
+    }
 }
 
 Tooltip.prototype = {
@@ -8469,7 +8475,7 @@ function Graph(el, nodes, links, options) {
     this.render();
 }
 
-Graph.version = "0.3";
+Graph.version = "0.5";
 
 Graph.prototype = {
     constructor: Graph,
@@ -8870,9 +8876,12 @@ Graph.prototype = {
         var isThereMatch = this.isThereMatch();
 
         circle.style('fill', function(e) {
+
             if (selectedNode) {
                 if (self.isAdjacent(e)) {
                     if (isThereMatch && isMatched(e) ||!isThereMatch) {
+                        // HACK: reordering for zindex
+                        this.parentNode.parentNode.appendChild(this.parentNode);
                         return self.getClusterColor(e.cluster);
                     } else {
                         return UNSELECTED_COLOR;
@@ -8881,6 +8890,8 @@ Graph.prototype = {
                     return UNSELECTED_COLOR;
                 }
             } else if (isThereMatch && isMatched(e)) {
+                // HACK: reordering for zindex
+                this.parentNode.parentNode.appendChild(this.parentNode);
                 return self.getClusterColor(e.cluster);
             } else {
                 return UNSELECTED_COLOR;
@@ -21293,9 +21304,6 @@ function app(data) {
 
     graph.on("node:mouseover", function(n) {
         if (!window.selectedNode) return;
-        console.log(n);
-        console.log(selectedNode);
-        console.log();
         var tweet = selectedNode.rcvd[n.text];
         if (!tweet) return;
         $("#insights-tooltip").append("<br />").append($("<div>").css({fontWeight:"bold"}).text("Mención a @" + graph.selectedNode.text + ":"));
