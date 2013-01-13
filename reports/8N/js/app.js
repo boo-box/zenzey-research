@@ -37,8 +37,9 @@ function app(data) {
         $clusterButtons.find(".active").removeClass("active");
     });
 
-    graph.on("node:click", function(n) {
+    graph.on("focus", function(n) {
         showTweets(n.text);
+        graph.center();
     });
 
     graph.on("node:mouseover", function(n) {
@@ -78,6 +79,22 @@ function app(data) {
                 sliderValues = data.values;                                      
             });
 
+        $(".form-search").submit(function(ev) {
+            var val;
+
+            ev.stopPropagation();ev.preventDefault();
+
+            val = $("#name-search").val();
+
+            setTimeout(function() {
+                selectNode(val);
+            }, 0);
+
+            setTimeout(function() {
+                dataTable.fnFilter(val);
+            }, 0);
+        });
+
         $("#name-search").keyup(function(ev) {
                 var val, ch,
                 $el = $(this);
@@ -94,6 +111,9 @@ function app(data) {
 
                 setTimeout(function() {
                     ch && graph.selectByText(val);
+                }, 0);
+
+                setTimeout(function() {
                     ch && dataTable.fnFilter(val);
                 }, 0);
             });
@@ -243,7 +263,6 @@ function app(data) {
 
     selectNode = function(screenName) {                    
         graph.selectByTextExact(screenName);
-        showTweets(screenName);
     }
 
 
