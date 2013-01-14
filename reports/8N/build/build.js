@@ -21553,7 +21553,7 @@ function app(data) {
                             var user = o.aData[0];
                             var $a = $("<a>")
                                 .attr("onclick", 
-                                      "javascript:selectNode('$U')".replace("$U", user))
+                                      "javascript:selectNode('$U', 1)".replace("$U", user))
                                 .attr("href", "#").html("@" + user);
                             var $img = $("<img>").attr("class", "img-rounded")
                                                  .css({ width: 30, height: 30 })
@@ -21606,13 +21606,16 @@ function app(data) {
         });
     }
 
-    selectNode = function(screenName) {                    
+    selectNode = function(screenName, center) {                    
         graph.selectByTextExact(screenName);
+        center && graph.center();
     }
 
+    $(".notifications a").bind("click", function(ev) {
+        console.log(ev.currentTarget, ev.currentTarget.href);
+    });
 
 module.exports = app;
-
 
 });
 require.register("insights-app/index.js", function(exports, require, module){
