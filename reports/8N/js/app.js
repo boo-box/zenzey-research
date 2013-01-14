@@ -255,7 +255,7 @@ function app(data) {
 
             if (tweets.length) {
                 $list = $.map(tweets, function(t) {
-                    return $("<li>").addClass("media").html(twitter.autoLink(t));
+                    return $("<li>").addClass("media").html(twitter.autoLink(t, { onclick: "window.open(this.href, '_blank');window.focus()" }));
                 });
             } else {
                 $list = "Sin tweets";
