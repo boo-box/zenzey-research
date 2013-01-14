@@ -8473,7 +8473,7 @@ function Graph(el, nodes, links, options) {
     this.render();
 }
 
-Graph.version = "0.6";
+Graph.version = "0.6.1";
 
 Graph.prototype = {
     constructor: Graph,
@@ -8800,9 +8800,7 @@ Graph.prototype = {
         d3.event.preventDefault();
         d3.event.stopPropagation();
 
-        this.selectNode(d);
-        this.draw();
-
+        this.focus(d);
         this.emit("node:click", d);
     },
 
@@ -9006,6 +9004,9 @@ Graph.prototype = {
      * Will put focus in one node that matches the fn result
      * 
      * @api public
+     *
+     * @param fn {Object|Function}
+     * @param center {Boolean}
      */
     focus: function(fn, center) {
         var n = this.selectNode(fn);
@@ -21377,7 +21378,10 @@ function app(data) {
 
     graph.on("focus", function(n) {
         showTweets(n.text);
-        graph.center();
+    });
+
+    graph.on("node:click", function(n) {
+        dataTable.fnFilter(n.text);
     });
 
     graph.on("node:mouseover", function(n) {
@@ -21389,7 +21393,6 @@ function app(data) {
     });
 
     min = 0; max = graph.max.size + 10;
-
     var sliderValues = {};
     $slider.rangeSlider({ 
             arrows: false,
@@ -21408,10 +21411,13 @@ function app(data) {
         }).on("valuesChanged", function(e, data) {                                 
                 var vals = sliderValues;                                         
 
+                if (vals.min == null || vals.max == null) {
+                    sliderValues = data.values;
+                    return;
+                }
+
                 if (vals.max !== data.values.max || vals.min !== data.values.min) { 
-                    graph.selectBy(function(d) {
-                            return d.total > data.values.min && d.total < data.values.max;
-                        });
+                    graph.selectBySize(data.values.min, data.values.max);
                 }                                                                      
 
                 sliderValues = data.values;                                      
@@ -21426,11 +21432,12 @@ function app(data) {
 
             setTimeout(function() {
                 selectNode(val);
-            }, 0);
+                graph.center();
+            }, 1000);
 
             setTimeout(function() {
                 dataTable.fnFilter(val);
-            }, 0);
+            }, 1000);
         });
 
         $("#name-search").keyup(function(ev) {
@@ -21583,7 +21590,7 @@ function app(data) {
             var tweets = _(data.sent).isArray() ? data.sent : [];
             var $list;
 
-            selectedNode = data;
+            window.selectedNode = data;
 
             if (tweets.length) {
                 $list = $.map(tweets, function(t) {
