@@ -21611,10 +21611,6 @@ function app(data) {
         center && graph.center();
     }
 
-    $(".notifications a").bind("click", function(ev) {
-        console.log(ev.currentTarget, ev.currentTarget.href);
-    });
-
 module.exports = app;
 
 });
