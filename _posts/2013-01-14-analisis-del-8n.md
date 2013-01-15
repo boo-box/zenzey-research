@@ -18,7 +18,7 @@ A través de Zenzey, un producto desarrollado en [Grupo42](http://www.grupo42.co
 
 ##Grafo Menciones
 
-[Éste grafo](http://blog.zenzey.com/reports/8N/) está compuesto por 3 grandes clusters. 
+[Éste grafo](/reports/8N/2.html) está compuesto por 3 grandes clusters. 
 
 El cluster 0 está compuesto por personas que recibieron muchas mentions. Entre las figuras de este clúster se reconocen principalmente a **Cristina Fernandez de Kirchner** a través de su cuenta oficial [@CFKArgentina](http://twitter.com/CFKArgentina) como el destinatario de la mayor cantidad de mensajes sobre el 8N.  Mauricio Macri ([@mauriciomacri](http://twitter.com/mauriciomacri)), Jorge Lanata ([@Lanataenel13](http://twitter.com/Lanataenel13)), Jorge Rial ([@jorgerial](http://twitter.com/jorgerial)) y Luis D'Elia ([@Luis_Delia](http://twitter.com/Luis_Delia)) completan la lista de personalidades de la política y el periodismo que mayor cantidad de mensajes recibieron. Entre los medios de prensa más mencionados, encontramos a los diarios La Nación ([@lanacioncom](http://twitter.com/lanacioncom)) e Infobae ([@infobae](http://twitter.com/infobae)) y los canales televisivos de noticias Todo Noticias ([@todonoticias](http://twitter.com/todonoticias)) y C5N ([@C5N](http://twitter.com/C5N)).
 
@@ -28,7 +28,7 @@ El cluster 2 está compuesto por cuentas que manifestaron un comportamiento est�
 
 ##Grafo Clustering
 
-[Este grafo](http://blog.zenzey.com/reports/8N/2.html) utiliza algoritmos de clustering (utilizando el método Louvain) para la separación de los usuarios en los distintos grupos (7 en total). El resultado son agrupaciones que demuestran interesantes coincidencias ideológicas y políticas, con clusters que representan a diversos grupos de la contienda, por ejemplo:
+[Este grafo](/reports/8N/) utiliza algoritmos de clustering (utilizando el método Louvain) para la separación de los usuarios en los distintos grupos (7 en total). El resultado son agrupaciones que demuestran interesantes coincidencias ideológicas y políticas, con clusters que representan a diversos grupos de la contienda, por ejemplo:
 
 * **Verde**: cuentas ligadas al oficialismo ([@678Oficial](http://twitter.com/678Oficial), [@cyngarciaradio](http://twitter.com/cyngarciaradio), [@ddd_ok](http://twitter.com/ddd_ok), [@tognetti_daniel](http://twitter.com/tognetti_daniel) y, curiosamente, [@telefenoticias](http://twitter.com/telefenoticias)).
 
@@ -116,8 +116,8 @@ En simultáneo al grafo, es posible analizar la información a través de la tab
 **Grupo42 Lab**
 
 Links
-* [Grafo Menciones](http://blog.zenzey.com/reports/8N/2.html)
-* [Grafo Clustering](http://blog.zenzey.com/reports/8N/)
+* [Grafo Menciones](/reports/8N/2.html)
+* [Grafo Clustering](/reports/8N/)
 
 Referencias
 * `[1]`: [http://es.wikipedia.org/wiki/Cluster](http://es.wikipedia.org/wiki/Cluster)
