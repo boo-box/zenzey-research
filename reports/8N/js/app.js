@@ -21,7 +21,7 @@ function app(data) {
             height: $el.height(),
             sizeAttr: "total",
             collisionAlpha: 15,
-            initialScale: 0.5,
+            initialScale: .5,
             tooltipTemplate: TOOLTIP
         });
 
