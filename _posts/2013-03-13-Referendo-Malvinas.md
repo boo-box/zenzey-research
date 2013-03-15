@@ -18,19 +18,19 @@ Al margen del debate geopolítico, quisimos conocer qué pensaban los ingleses y
 #Resultados
 
 ##¿Cree que el Reino Unido y Gran Bretaña podrían ir a la guerra por las Malvinas otra vez?
-[<img src="/static/img/War Poll Results.png" />]
+<img src="/static/img/War_Poll_Results.png" />
 Fuente: 22 respuestas
 
 ##¿Está de acuerdo en el reclamo de soberanía del Reino Unido sobre las Islas Malvinas?
-[<img src="/static/img/Claim Poll Results.png" />]
+<img src="/static/img/Claim_Poll_Results.png" />
 Fuente: 20 respuestas
 
 ##¿Siente que los isleños tienen el derecho a la auto-determinación?
-[<img src="/static/img/Right Poll Results.png" />]
+<img src="/static/img/Right_Poll_Results.png" />
 Fuente: 20 respuestas
 
-##¿Piensa que las Naciones Unidas es un mediador válido en el conflicto por la soveranía de las Malvinas?
-[<img src="/static/img/UN Poll Results.png" />]
+##¿Piensa que las Naciones Unidas es un mediador válido en el conflicto por la soberanía de las Malvinas?
+<img src="/static/img/UN_Poll_Results.png" />
 Fuente: 24 respuestas
 
 
