@@ -1,0 +1,16 @@
+#parent {
+  border: 1px solid #DDD;
+  height: 500px;
+}
+
+#loading {
+  margin: 10px;
+}
+
+.form-search {
+  text-align:right
+}
+
+.row {
+  margin-bottom: 10px;
+}
