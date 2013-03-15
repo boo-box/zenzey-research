@@ -43,6 +43,100 @@ Los resultados son, de alguna manera, los esperados:
 
 Por otro lado, recibimos varias consideraciones acerca de "reducir problemas geopolíticos complejos a preguntas de Sí o No", una crítica válida pero infranqueable dado el contexto de la encuesta; y encontramos algunos usuarios que realizaron algunas disertaciones muy interesantes, aunque breves, sobre el conflicto de soberanía,  que transcribimos a continuación:
 
-Transcripts.
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/f_a_polls">f_a_polls</a> We think reducing complex geopolitical issues to a Yes/No question is a dangerous idea!</p>&mdash; Collections Trust (@CollectionTrust) <a href="https://twitter.com/CollectionTrust/status/311421354568187904">12 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/f_a_polls">f_a_polls</a> if the truth and reality about self-determination was limited to the physical position then it would be too valueless a virtue.</p>&mdash; Gatambia N.J. (@NewtonGatambia) <a href="https://twitter.com/NewtonGatambia/status/311114901215133697">11 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/f_a_polls">f_a_polls</a> Your question does not have a Yes/No answer. It's for the Islander's to decide as sovereignty is theirs; if they want GB then Yes</p>&mdash; Phil Harding MBE (@philhardingnet) <a href="https://twitter.com/philhardingnet/status/309012201350516736">5 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/iapolls">iapolls</a> NO - Why should anyone still be permitted to colonise someone else's land?</p>&mdash; Truth Razor (@truthrazor) <a href="https://twitter.com/truthrazor/status/311520390738485248">12 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/iapolls">iapolls</a> Politicians on both sides are moronic enough.</p>&mdash; Stitch Mitchell (@StitchMitchell) <a href="https://twitter.com/StitchMitchell/status/311359965157789696">12 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/iapolls">iapolls</a> <a href="https://twitter.com/search/%23FalklandsPoll">#FalklandsPoll</a> be serious. Cameron can't even stop Brussels on bonuses do you think he can fight a real war?</p>&mdash; filippo addarii (@filippoaddarii) <a href="https://twitter.com/filippoaddarii/status/310034114269028352">8 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/iapolls">iapolls</a> I hope that Britain would not be stupid enough to go to war again over a country that is nothing but a property of colonialism.</p>&mdash; Alexander Stebbings (@Alex_Stebbings) <a href="https://twitter.com/Alex_Stebbings/status/309292954470739969">6 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/iapolls">iapolls</a> Yes there could be another "falklands" war in future and Yes the Malvinas are Argentinas.</p>&mdash; Alan Bedford (@Comrade58) <a href="https://twitter.com/Comrade58/status/308863590461489152">5 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/iapolls">iapolls</a> Yes, the UN was set up after the biggest and most destructive war in history to prevent future conflict, mediate and maintain peace</p>&mdash; Amina Mari (@MinxieMina) <a href="https://twitter.com/MinxieMina/status/308710036715208705">4 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+
+
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/neutralitypolls">neutralitypolls</a> I think the idea of nationhood is divisive and that creating arbitrary lines on maps is not conducive to human happiness</p>&mdash; Ray Burst (@RayBurst) <a href="https://twitter.com/RayBurst/status/311112758110322688">11 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/neutralitypolls">neutralitypolls</a> No! Give up Malvinas!</p>&mdash; Anon (@Anon_sailor) <a href="https://twitter.com/Anon_sailor/status/310824529477922816">10 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/neutralitypolls">neutralitypolls</a> massive no, no mediation necessary, if the falkland islanders want independence thats their choice, <a href="https://twitter.com/search/%23Arg">#Arg</a> have NO claim!</p>&mdash; James Callister (@da_calster) <a href="https://twitter.com/da_calster/status/309743154326810624">7 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/neutralitypolls">neutralitypolls</a> Yes</p>&mdash; Thomas Buckland (@thbuckland) <a href="https://twitter.com/thbuckland/status/308794242623492096">5 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+
+<blockquote class="twitter-tweet" lang="es"><p>@<a href="https://twitter.com/neutralitypolls">neutralitypolls</a> Like what happened in Iraq 2003....What did they do...? Nothing.</p>&mdash; Hampy Mangat (@RedMachine_P1) <a href="https://twitter.com/RedMachine_P1/status/310060540355543040">8 de marzo de 2013</a></blockquote>
+
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 En el futuro seguiremos generando este tipo de encuestas, así que los invitamos a comentar y por supuesto a sugerir nuevos temas a tratar.
